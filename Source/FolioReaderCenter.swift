@@ -1342,12 +1342,12 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         hideBars()
 
         let menu = FolioReaderFontsMenu(folioReader: folioReader, readerConfig: readerConfig)
-        menu.modalPresentationStyle = .custom
+        menu.modalPresentationStyle = .overFullScreen
 
         animator = ZFModalTransitionAnimator(modalViewController: menu)
         animator.isDragable = false
         animator.bounces = false
-        animator.behindViewAlpha = 0.4
+        animator.behindViewAlpha = 1
         animator.behindViewScale = 1
         animator.transitionDuration = 0.6
         animator.direction = ZFModalTransitonDirection.bottom
@@ -1364,12 +1364,12 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         hideBars()
 
         let menu = FolioReaderPlayerMenu(folioReader: folioReader, readerConfig: readerConfig)
-        menu.modalPresentationStyle = .custom
+        menu.modalPresentationStyle = .overFullScreen
 
         animator = ZFModalTransitionAnimator(modalViewController: menu)
         animator.isDragable = true
         animator.bounces = false
-        animator.behindViewAlpha = 0.4
+        animator.behindViewAlpha = 1
         animator.behindViewScale = 1
         animator.transitionDuration = 0.6
         animator.direction = ZFModalTransitonDirection.bottom
