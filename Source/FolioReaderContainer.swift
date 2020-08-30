@@ -68,7 +68,7 @@ open class FolioReaderContainer: UIViewController {
         self.epubPath = ""
         self.shouldRemoveEpub = false
         self.book = FRBook()
-
+        self.folioChapters = [ZOFolioChapter]()
         super.init(coder: aDecoder)
 
         // Configure the folio reader.
