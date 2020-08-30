@@ -460,14 +460,12 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
 
         setPageProgressiveDirection(cell)
         
-        // Configure for DRM Books
-        //Dev TODO fold this into bool for DRM on readerContainer
+        // Configure the cell
         var html: String!
         let resource = self.book.spine.spineReferences[indexPath.row].resource
-
-        if self.readerContainer?.folioChapters.count > 0 {
-            // This is a DRM Book
-            // Configure the cell
+        
+        // Read HTML for DRM or Non DRM
+        if self.readerContainer?.isDRM {
             let decryptedHTML = self.readerContainer?.folioChapters[indexPath.row].decryptedHTML
             let data = decryptedHTML?.data(using: String.Encoding.utf8)
             guard var htmlString = try? String(decoding: data!, as: UTF8.self) else {
@@ -475,8 +473,6 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
             }
             html = htmlString
         } else {
-            // This is non DRM Book
-            // Configure the cell
             guard var htmlString = try? String(contentsOfFile: resource.fullHref, encoding: String.Encoding.utf8) else {
                 return cell
             }
