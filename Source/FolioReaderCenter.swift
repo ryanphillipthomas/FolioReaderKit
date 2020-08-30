@@ -462,21 +462,24 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         
         // Configure for DRM Books
         //Dev TODO fold this into bool for DRM on readerContainer
+        var html: String!
         if self.readerContainer?.folioChapters.count > 0 {
             // This is a DRM Book
             // Configure the cell
             let decryptedHTML = self.readerContainer?.folioChapters[indexPath.row].decryptedHTML
             let data = decryptedHTML?.data(using: String.Encoding.utf8)
-            guard var html = try? String(decoding: data!, as: UTF8.self) else {
+            guard var htmlString = try? String(decoding: data!, as: UTF8.self) else {
                 return cell
             }
+            html = htmlString
         } else {
             // This is non DRM Book
             // Configure the cell
             let resource = self.book.spine.spineReferences[indexPath.row].resource
-            guard var html = try? String(contentsOfFile: resource.fullHref, encoding: String.Encoding.utf8) else {
+            guard var htmlString = try? String(contentsOfFile: resource.fullHref, encoding: String.Encoding.utf8) else {
                 return cell
             }
+            html = htmlString
         }
         
         // Inject viewport
