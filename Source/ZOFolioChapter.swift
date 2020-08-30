@@ -11,7 +11,7 @@ import UIKit
 public class ZOFolioChapter: NSObject {
     var decryptedHTML: String
 
-    init(decryptedHTML: String) {
+    public init(decryptedHTML: String) {
         self.decryptedHTML = decryptedHTML
     }
 }
