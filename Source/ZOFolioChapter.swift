@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZOFolioChapter: NSObject {
+public class ZOFolioChapter: NSObject {
     var decryptedHTML: String
 
     init(decryptedHTML: String) {
