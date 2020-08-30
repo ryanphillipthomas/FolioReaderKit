@@ -45,7 +45,7 @@ open class FolioReaderContainer: UIViewController {
 		self.unzipPath = unzipPath
         self.shouldRemoveEpub = removeEpub
         self.book = FRBook()
-        self.folioChapters = folioChapters
+        self.folioChapters = chapters
 
         super.init(nibName: nil, bundle: Bundle.frameworkBundle())
 
