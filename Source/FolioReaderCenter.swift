@@ -463,6 +463,8 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         // Configure for DRM Books
         //Dev TODO fold this into bool for DRM on readerContainer
         var html: String!
+        let resource = self.book.spine.spineReferences[indexPath.row].resource
+
         if self.readerContainer?.folioChapters.count > 0 {
             // This is a DRM Book
             // Configure the cell
@@ -475,7 +477,6 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         } else {
             // This is non DRM Book
             // Configure the cell
-            let resource = self.book.spine.spineReferences[indexPath.row].resource
             guard var htmlString = try? String(contentsOfFile: resource.fullHref, encoding: String.Encoding.utf8) else {
                 return cell
             }
