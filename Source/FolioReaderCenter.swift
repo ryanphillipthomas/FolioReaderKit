@@ -465,7 +465,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         let resource = self.book.spine.spineReferences[indexPath.row].resource
         
         // Read HTML for DRM or Non DRM
-        if self.readerContainer?.isDRM {
+        if self.readerContainer?.isDRM ?? false {
             let decryptedHTML = self.readerContainer?.folioChapters[indexPath.row].decryptedHTML
             let data = decryptedHTML?.data(using: String.Encoding.utf8)
             guard var htmlString = try? String(decoding: data!, as: UTF8.self) else {
