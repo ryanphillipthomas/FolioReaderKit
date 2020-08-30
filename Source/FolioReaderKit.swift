@@ -162,8 +162,8 @@ extension FolioReader {
     ///   - animated: Pass true to animate the presentation; otherwise, pass false.
     ///   - chapters: Pass chatpers for use in DRM support; otherwise, pass nil.
     open func presentReader(parentViewController: UIViewController, withEpubPath epubPath: String, unzipPath: String? = nil, andConfig config: FolioReaderConfig, shouldRemoveEpub: Bool = true, animated:
-        Bool = true, chapters: [ZOFolioChapter]) {
-        let readerContainer = FolioReaderContainer(withConfig: config, folioReader: self, epubPath: epubPath, unzipPath: unzipPath, removeEpub: shouldRemoveEpub, chapters: chapters)
+        Bool = true, chapters: [ZOFolioChapter], isDRM: Bool = false) {
+        let readerContainer = FolioReaderContainer(withConfig: config, folioReader: self, epubPath: epubPath, unzipPath: unzipPath, removeEpub: shouldRemoveEpub, chapters: chapters, isDRM: isDRM)
         self.readerContainer = readerContainer
         parentViewController.present(readerContainer, animated: animated, completion: nil)
         addObservers()

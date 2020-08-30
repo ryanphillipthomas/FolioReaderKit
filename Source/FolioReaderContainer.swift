@@ -19,6 +19,7 @@ open class FolioReaderContainer: UIViewController {
 	public var unzipPath: String?
     public var book: FRBook
     public var folioChapters: [ZOFolioChapter]
+    public var isDRM = false
     public var centerNavigationController: UINavigationController?
     public var centerViewController: FolioReaderCenter?
     public var audioPlayer: FolioReaderAudioPlayer?
@@ -38,7 +39,7 @@ open class FolioReaderContainer: UIViewController {
     ///   - path: The ePub path on system. Must not be nil nor empty string.
 	///   - unzipPath: Path to unzip the compressed epub.
     ///   - removeEpub: Should delete the original file after unzip? Default to `true` so the ePub will be unziped only once.
-    public init(withConfig config: FolioReaderConfig, folioReader: FolioReader, epubPath path: String, unzipPath: String? = nil, removeEpub: Bool = true, chapters: [ZOFolioChapter]) {
+    public init(withConfig config: FolioReaderConfig, folioReader: FolioReader, epubPath path: String, unzipPath: String? = nil, removeEpub: Bool = true, chapters: [ZOFolioChapter], isDRM: Bool = false) {
         self.readerConfig = config
         self.folioReader = folioReader
         self.epubPath = path
@@ -46,7 +47,8 @@ open class FolioReaderContainer: UIViewController {
         self.shouldRemoveEpub = removeEpub
         self.book = FRBook()
         self.folioChapters = chapters
-
+        self.isDRM = isDRM
+        
         super.init(nibName: nil, bundle: Bundle.frameworkBundle())
 
         // Configure the folio reader.
@@ -69,6 +71,8 @@ open class FolioReaderContainer: UIViewController {
         self.shouldRemoveEpub = false
         self.book = FRBook()
         self.folioChapters = [ZOFolioChapter]()
+        self.isDRM = false
+        
         super.init(coder: aDecoder)
 
         // Configure the folio reader.
