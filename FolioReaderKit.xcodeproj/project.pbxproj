@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A41904124FC09E3005CD1B8 /* ZOFolioChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41904024FC09E3005CD1B8 /* ZOFolioChapter.swift */; };
 		1A41E8912031E22300A8F70C /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E8902031E22300A8F70C /* MediaType.swift */; };
 		1A65DDCC1DA73F8E0033C277 /* MenuItemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A65DDCB1DA73F8D0033C277 /* MenuItemKit.framework */; };
 		1A65DDD21DA744190033C277 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A65DDD01DA744190033C277 /* Realm.framework */; };
@@ -125,6 +126,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A41904024FC09E3005CD1B8 /* ZOFolioChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOFolioChapter.swift; sourceTree = "<group>"; };
 		1A41E8902031E22300A8F70C /* MediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		1A65DDCB1DA73F8D0033C277 /* MenuItemKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MenuItemKit.framework; path = Carthage/Build/iOS/MenuItemKit.framework; sourceTree = "<group>"; };
 		1A65DDD01DA744190033C277 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				1A958F241D397BE900D56699 /* PageViewController.swift */,
 				1A65DDD41DA744410033C277 /* QuoteImage.swift */,
 				1A958F901D397BE900D56699 /* ScrollScrubber.swift */,
+				0A41904024FC09E3005CD1B8 /* ZOFolioChapter.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -517,6 +520,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = B0D699011D035FA1003B4CCD;
@@ -589,6 +593,7 @@
 				1A958FA71D397BE900D56699 /* FolioReaderPlayerMenu.swift in Sources */,
 				1A958F921D397BE900D56699 /* FREpubParser.swift in Sources */,
 				1A958F9C1D397BE900D56699 /* FolioReaderCenter.swift in Sources */,
+				0A41904124FC09E3005CD1B8 /* ZOFolioChapter.swift in Sources */,
 				1A958FAE1D397BE900D56699 /* PageViewController.swift in Sources */,
 				1A958FAD1D397BE900D56699 /* Highlight.swift in Sources */,
 				1A958F981D397BE900D56699 /* FRSmils.swift in Sources */,
