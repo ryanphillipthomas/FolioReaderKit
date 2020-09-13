@@ -12,6 +12,7 @@
 		0A0BB410250E8B4D0046C13B /* Georgia Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB40C250E8B4D0046C13B /* Georgia Bold Italic.ttf */; };
 		0A0BB411250E8B4D0046C13B /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB40D250E8B4D0046C13B /* Georgia.ttf */; };
 		0A0BB414250E8B7A0046C13B /* CliffordNineComp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB413250E8B7A0046C13B /* CliffordNineComp.ttf */; };
+		0A0BB41F250E9AB50046C13B /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB41E250E9AB50046C13B /* Helvetica.ttc */; };
 		0A41904124FC09E3005CD1B8 /* ZOFolioChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41904024FC09E3005CD1B8 /* ZOFolioChapter.swift */; };
 		1A41E8912031E22300A8F70C /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E8902031E22300A8F70C /* MediaType.swift */; };
 		1A65DDCC1DA73F8E0033C277 /* MenuItemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A65DDCB1DA73F8D0033C277 /* MenuItemKit.framework */; };
@@ -136,6 +137,7 @@
 		0A0BB40C250E8B4D0046C13B /* Georgia Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia Bold Italic.ttf"; sourceTree = "<group>"; };
 		0A0BB40D250E8B4D0046C13B /* Georgia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Georgia.ttf; sourceTree = "<group>"; };
 		0A0BB413250E8B7A0046C13B /* CliffordNineComp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CliffordNineComp.ttf; sourceTree = "<group>"; };
+		0A0BB41E250E9AB50046C13B /* Helvetica.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helvetica.ttc; sourceTree = "<group>"; };
 		0A41904024FC09E3005CD1B8 /* ZOFolioChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOFolioChapter.swift; sourceTree = "<group>"; };
 		1A41E8902031E22300A8F70C /* MediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		1A65DDCB1DA73F8D0033C277 /* MenuItemKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MenuItemKit.framework; path = Carthage/Build/iOS/MenuItemKit.framework; sourceTree = "<group>"; };
@@ -257,6 +259,14 @@
 			path = Clifford;
 			sourceTree = "<group>";
 		};
+		0A0BB41D250E9A9C0046C13B /* Helvetica */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BB41E250E9AB50046C13B /* Helvetica.ttc */,
+			);
+			path = Helvetica;
+			sourceTree = "<group>";
+		};
 		1A65DDCA1DA73F8C0033C277 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +350,7 @@
 		1A958F271D397BE900D56699 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0A0BB41D250E9A9C0046C13B /* Helvetica */,
 				0A0BB412250E8B600046C13B /* Clifford */,
 				0A0BB401250E8B130046C13B /* Georgia */,
 				1A958F281D397BE900D56699 /* Andada */,
@@ -595,6 +606,7 @@
 				0A0BB411250E8B4D0046C13B /* Georgia.ttf in Resources */,
 				1A958FB11D397BE900D56699 /* Andada-BoldItalic.otf in Resources */,
 				1A958FB91D397BE900D56699 /* Lora-BoldItalic.ttf in Resources */,
+				0A0BB41F250E9AB50046C13B /* Helvetica.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
