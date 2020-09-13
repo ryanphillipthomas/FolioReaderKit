@@ -54,6 +54,9 @@ function setFontName(cls) {
     removeClass(elm, "lato");
     removeClass(elm, "lora");
     removeClass(elm, "raleway");
+    removeClass(elm, "clifford");
+    removeClass(elm, "helvetica");
+    removeClass(elm, "georgia");
     addClass(elm, cls);
 }
 

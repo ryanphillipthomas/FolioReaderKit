@@ -13,6 +13,9 @@ public enum FolioReaderFont: Int {
     case lato
     case lora
     case raleway
+    case clifford
+    case helvetica
+    case georgia
 
     public static func folioReaderFont(fontName: String) -> FolioReaderFont? {
         var font: FolioReaderFont?
@@ -21,6 +24,9 @@ public enum FolioReaderFont: Int {
         case "lato": font = .lato
         case "lora": font = .lora
         case "raleway": font = .raleway
+        case "clifford": font = .clifford
+        case "helvetica": font = .helvetica
+        case "georgia": font = .georgia
         default: break
         }
         return font
@@ -32,6 +38,9 @@ public enum FolioReaderFont: Int {
         case .lato: return "lato"
         case .lora: return "lora"
         case .raleway: return "raleway"
+        case .clifford: return "clifford"
+        case .helvetica: return "helvetica"
+        case .georgia: return "georgia"
         }
     }
 }
@@ -165,11 +174,15 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
             ])
         fontName.delegate = self
         fontName.tag = 2
+        
+        fontName.addSegmentWithTitle("Clifford", onSelectionImage: nil, offSelectionImage: nil)
+        fontName.addSegmentWithTitle("Helvetica", onSelectionImage: nil, offSelectionImage: nil)
+        fontName.addSegmentWithTitle("Georgia", onSelectionImage: nil, offSelectionImage: nil)
 
-        fontName.addSegmentWithTitle("Andada", onSelectionImage: nil, offSelectionImage: nil)
-        fontName.addSegmentWithTitle("Lato", onSelectionImage: nil, offSelectionImage: nil)
-        fontName.addSegmentWithTitle("Lora", onSelectionImage: nil, offSelectionImage: nil)
-        fontName.addSegmentWithTitle("Raleway", onSelectionImage: nil, offSelectionImage: nil)
+//        fontName.addSegmentWithTitle("Andada", onSelectionImage: nil, offSelectionImage: nil)
+//        fontName.addSegmentWithTitle("Lato", onSelectionImage: nil, offSelectionImage: nil)
+//        fontName.addSegmentWithTitle("Lora", onSelectionImage: nil, offSelectionImage: nil)
+//        fontName.addSegmentWithTitle("Raleway", onSelectionImage: nil, offSelectionImage: nil)
 
 //        fontName.segments[0].titleFont = UIFont(name: "Andada-Regular", size: 18)!
 //        fontName.segments[1].titleFont = UIFont(name: "Lato-Regular", size: 18)!

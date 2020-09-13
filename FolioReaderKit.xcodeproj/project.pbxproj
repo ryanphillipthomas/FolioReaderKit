@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0BB40E250E8B4D0046C13B /* Georgia Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB40A250E8B4D0046C13B /* Georgia Bold.ttf */; };
+		0A0BB40F250E8B4D0046C13B /* Georgia Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB40B250E8B4D0046C13B /* Georgia Italic.ttf */; };
+		0A0BB410250E8B4D0046C13B /* Georgia Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB40C250E8B4D0046C13B /* Georgia Bold Italic.ttf */; };
+		0A0BB411250E8B4D0046C13B /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB40D250E8B4D0046C13B /* Georgia.ttf */; };
+		0A0BB414250E8B7A0046C13B /* CliffordNineComp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB413250E8B7A0046C13B /* CliffordNineComp.ttf */; };
 		0A41904124FC09E3005CD1B8 /* ZOFolioChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41904024FC09E3005CD1B8 /* ZOFolioChapter.swift */; };
 		1A41E8912031E22300A8F70C /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E8902031E22300A8F70C /* MediaType.swift */; };
 		1A65DDCC1DA73F8E0033C277 /* MenuItemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A65DDCB1DA73F8D0033C277 /* MenuItemKit.framework */; };
@@ -126,6 +131,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0BB40A250E8B4D0046C13B /* Georgia Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia Bold.ttf"; sourceTree = "<group>"; };
+		0A0BB40B250E8B4D0046C13B /* Georgia Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia Italic.ttf"; sourceTree = "<group>"; };
+		0A0BB40C250E8B4D0046C13B /* Georgia Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia Bold Italic.ttf"; sourceTree = "<group>"; };
+		0A0BB40D250E8B4D0046C13B /* Georgia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Georgia.ttf; sourceTree = "<group>"; };
+		0A0BB413250E8B7A0046C13B /* CliffordNineComp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CliffordNineComp.ttf; sourceTree = "<group>"; };
 		0A41904024FC09E3005CD1B8 /* ZOFolioChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOFolioChapter.swift; sourceTree = "<group>"; };
 		1A41E8902031E22300A8F70C /* MediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		1A65DDCB1DA73F8D0033C277 /* MenuItemKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MenuItemKit.framework; path = Carthage/Build/iOS/MenuItemKit.framework; sourceTree = "<group>"; };
@@ -228,6 +238,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A0BB401250E8B130046C13B /* Georgia */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BB40C250E8B4D0046C13B /* Georgia Bold Italic.ttf */,
+				0A0BB40A250E8B4D0046C13B /* Georgia Bold.ttf */,
+				0A0BB40B250E8B4D0046C13B /* Georgia Italic.ttf */,
+				0A0BB40D250E8B4D0046C13B /* Georgia.ttf */,
+			);
+			path = Georgia;
+			sourceTree = "<group>";
+		};
+		0A0BB412250E8B600046C13B /* Clifford */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BB413250E8B7A0046C13B /* CliffordNineComp.ttf */,
+			);
+			path = Clifford;
+			sourceTree = "<group>";
+		};
 		1A65DDCA1DA73F8C0033C277 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +340,8 @@
 		1A958F271D397BE900D56699 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0A0BB412250E8B600046C13B /* Clifford */,
+				0A0BB401250E8B130046C13B /* Georgia */,
 				1A958F281D397BE900D56699 /* Andada */,
 				1A958F2D1D397BE900D56699 /* Lato */,
 				1A958F321D397BE900D56699 /* Lora */,
@@ -541,6 +572,7 @@
 			files = (
 				1A958FBA1D397BE900D56699 /* Lora-Italic.ttf in Resources */,
 				1A958FB21D397BE900D56699 /* Andada-Italic.otf in Resources */,
+				0A0BB40F250E8B4D0046C13B /* Georgia Italic.ttf in Resources */,
 				1A958FBF1D397BE900D56699 /* Raleway-Regular.ttf in Resources */,
 				1A958FBB1D397BE900D56699 /* Lora-Regular.ttf in Resources */,
 				1A958FB41D397BE900D56699 /* Lato-Bold.ttf in Resources */,
@@ -550,13 +582,17 @@
 				1A9590151D397C1300D56699 /* Images.xcassets in Resources */,
 				1A958FAF1D397BE900D56699 /* Bridge.js in Resources */,
 				1A958FBC1D397BE900D56699 /* Raleway-Bold.ttf in Resources */,
+				0A0BB410250E8B4D0046C13B /* Georgia Bold Italic.ttf in Resources */,
 				1A958FB71D397BE900D56699 /* Lato-Regular.ttf in Resources */,
 				1A9590121D397BE900D56699 /* Style.css in Resources */,
 				1A958FB01D397BE900D56699 /* Andada-Bold.otf in Resources */,
 				1A9590171D397CAF00D56699 /* FolioReaderKit.podspec in Resources */,
+				0A0BB40E250E8B4D0046C13B /* Georgia Bold.ttf in Resources */,
 				1A958FB51D397BE900D56699 /* Lato-BoldItalic.ttf in Resources */,
 				1A958FB61D397BE900D56699 /* Lato-Italic.ttf in Resources */,
 				1A958FBD1D397BE900D56699 /* Raleway-BoldItalic.ttf in Resources */,
+				0A0BB414250E8B7A0046C13B /* CliffordNineComp.ttf in Resources */,
+				0A0BB411250E8B4D0046C13B /* Georgia.ttf in Resources */,
 				1A958FB11D397BE900D56699 /* Andada-BoldItalic.otf in Resources */,
 				1A958FB91D397BE900D56699 /* Lora-BoldItalic.ttf in Resources */,
 			);
