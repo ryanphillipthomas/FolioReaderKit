@@ -9,13 +9,13 @@
 import UIKit
 
 public enum FolioReaderFont: Int {
-    case andada = 0
+    case clifford = 0
+    case helvetica
+    case georgia
+    case andada
     case lato
     case lora
     case raleway
-    case clifford
-    case helvetica
-    case georgia
 
     public static func folioReaderFont(fontName: String) -> FolioReaderFont? {
         var font: FolioReaderFont?

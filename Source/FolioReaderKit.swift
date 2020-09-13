@@ -198,13 +198,13 @@ extension FolioReader {
         }
     }
 
-    /// Check current font name. Default .andada
+    /// Check current font name. Default .clifford
     open var currentFont: FolioReaderFont {
         get {
             guard
                 let rawValue = self.defaults.value(forKey: kCurrentFontFamily) as? Int,
                 let font = FolioReaderFont(rawValue: rawValue) else {
-                    return .andada
+                    return .clifford
             }
 
             return font

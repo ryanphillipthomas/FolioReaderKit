@@ -241,7 +241,7 @@ html.nightMode .highlight-underline {border-bottom: 2px solid rgba(240, 40, 20, 
 .lora, .lora p, .lora span, .lora div { font-family: "Lora", serif !important; }
 .raleway, .raleway p, .raleway span, .raleway div { font-family: "Raleway", sans-serif !important; }
 .georgia, .georgia p, .georgia span, .georgia div { font-family: "Georgia", serif !important; }
-.clifford, .clifford p, .clifford span, .clifford div { font-family: "Clifford", serif !important; }
+.clifford, .clifford p, .clifford span, .clifford div { font-family: "CliffordNineComp", serif !important; }
 .helvetica, .helvetica p, .helvetica span, .helvetica div { font-family: "Helvetica", serif !important; }
 
 
