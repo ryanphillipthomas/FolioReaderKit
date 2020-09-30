@@ -1454,17 +1454,23 @@ extension FolioReaderCenter: FolioReaderPageDelegate {
         }
         
         // Pass the event to the centers `pageDelegate`
-        pageDelegate?.pageDidLoad?(page)
+        if let pageDelegate = pageDelegate {
+            pageDelegate.pageDidLoad?(page)
+        }
     }
     
     public func pageWillLoad(_ page: FolioReaderPage) {
         // Pass the event to the centers `pageDelegate`
-        pageDelegate?.pageWillLoad?(page)
+        if let pageDelegate = pageDelegate {
+            pageDelegate.pageWillLoad?(page)
+        }
     }
     
     public func pageTap(_ recognizer: UITapGestureRecognizer) {
         // Pass the event to the centers `pageDelegate`
-        pageDelegate?.pageTap?(recognizer)
+        if let pageDelegate = pageDelegate {
+            pageDelegate.pageTap?(recognizer)
+        }
     }
     
 }
