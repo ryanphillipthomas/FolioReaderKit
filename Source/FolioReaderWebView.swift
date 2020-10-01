@@ -326,17 +326,20 @@ open class FolioReaderWebView: WKWebView {
         var menuItems: [UIMenuItem] = []
 
         // menu on existing highlight
-        if isShare {
-            menuItems = [colorsItem, editNoteItem, removeItem]
-            
-            if (self.readerConfig.allowSharing == true) {
-                menuItems.append(shareItem)
-            }
-            
-            isShare = false
-        } else if isColors {
+//        if isShare {
+//            menuItems = [colorsItem, editNoteItem, removeItem]
+//
+//            if (self.readerConfig.allowSharing == true) {
+//                menuItems.append(shareItem)
+//            }
+//
+//            isShare = false
+//        } else
+            if isColors {
             // menu for selecting highlight color
-            menuItems = [yellowItem, greenItem, blueItem, pinkItem, underlineItem]
+            //menuItems = [yellowItem, greenItem, blueItem, pinkItem, underlineItem]
+            menuItems = [yellowItem]
+
         } else {
             // default menu
             menuItems = [highlightItem, defineItem, highlightNoteItem]
