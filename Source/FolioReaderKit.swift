@@ -361,7 +361,8 @@ extension FolioReader {
         let position = [
             "pageNumber": (self.readerCenter?.currentPageNumber ?? 0),
             "pageOffsetX": webView.scrollView.contentOffset.x,
-            "pageOffsetY": webView.scrollView.contentOffset.y
+            "pageOffsetY": webView.scrollView.contentOffset.y,
+            "updateDate": Date()
             ] as [String : Any]
 
         self.savedPositionForCurrentBook = position
