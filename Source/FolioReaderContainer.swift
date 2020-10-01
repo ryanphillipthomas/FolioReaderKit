@@ -183,6 +183,13 @@ open class FolioReaderContainer: UIViewController {
             }
         }
     }
+    
+    override open func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if isBeingDismissed {
+            folioReader.saveReaderState()
+        }
+    }
 
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
