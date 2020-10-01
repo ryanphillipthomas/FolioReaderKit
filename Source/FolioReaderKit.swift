@@ -168,10 +168,20 @@ extension FolioReader {
     open func presentReader(parentViewController: UIViewController, withEpubPath epubPath: String, unzipPath: String? = nil, andConfig config: FolioReaderConfig, shouldRemoveEpub: Bool = true, animated:
         Bool = true, chapters: [ZOFolioChapter], isDRM: Bool = false) {
         let readerContainer = FolioReaderContainer(withConfig: config, folioReader: self, epubPath: epubPath, unzipPath: unzipPath, removeEpub: shouldRemoveEpub, chapters: chapters, isDRM: isDRM)
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            readerContainer.modalPresentationStyle = .fullScreen
+        }
         self.readerContainer = readerContainer
         parentViewController.present(readerContainer, animated: animated, completion: nil)
         addObservers()
     }
+}
+
+enum UIUserInterfaceIdiom : Int {
+    case unspecified
+
+    case phone // iPhone and iPod touch style UI
+    case pad   // iPad style UI (also includes macOS Catalyst)
 }
 
 // MARK: -  Getters and setters for stored values
