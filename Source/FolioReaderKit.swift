@@ -75,6 +75,10 @@ public enum MediaOverlayStyle: Int {
 /// FolioReader actions delegate
 @objc public protocol FolioReaderDelegate: class {
     
+    /// Called when reader did save.
+    /// - Parameter folioReaderPosition: The position of the FolioReader
+    @objc optional func folioReaderDidSave(_ folioReaderPosition: [String: Any]?)
+    
     /// Did finished loading book.
     ///
     /// - Parameters:
@@ -351,6 +355,7 @@ extension FolioReader {
             ] as [String : Any]
 
         self.savedPositionForCurrentBook = position
+        self.delegate?.folioReaderDidSave?(position)
     }
 
     /// Closes and save the reader current instance.
