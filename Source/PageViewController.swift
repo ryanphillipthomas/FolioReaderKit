@@ -40,15 +40,24 @@ class PageViewController: UIPageViewController {
 
         segmentedControl = UISegmentedControl(items: segmentedControlItems)
         segmentedControl.addTarget(self, action: #selector(PageViewController.didSwitchMenu(_:)), for: UIControl.Event.valueChanged)
+        if readerConfig.allowHighlighting {
+            segmentedControl.setWidth(100, forSegmentAt: 0)
+            segmentedControl.setWidth(100, forSegmentAt: 1)
+        } else {
+            segmentedControl.setWidth(100, forSegmentAt: 0)
+            index = 0
+        }
         segmentedControl.selectedSegmentIndex = index
-        segmentedControl.setWidth(100, forSegmentAt: 0)
-        segmentedControl.setWidth(100, forSegmentAt: 1)
         self.navigationItem.titleView = segmentedControl
 
-        viewList = [viewControllerOne, viewControllerTwo]
-
-        viewControllerOne.didMove(toParent: self)
-        viewControllerTwo.didMove(toParent: self)
+        if readerConfig.allowHighlighting {
+            viewList = [viewControllerOne, viewControllerTwo]
+             viewControllerOne.didMove(toParent: self)
+             viewControllerTwo.didMove(toParent: self)
+        } else {
+            viewList = [viewControllerOne]
+            viewControllerOne.didMove(toParent: self)
+        }
 
         self.delegate = self
         self.dataSource = self

@@ -56,26 +56,29 @@ open class FolioReaderWebView: WKWebView {
     // MARK: - UIMenuController
 
     open override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
-        guard readerConfig.useReaderMenuController else {
-            return super.canPerformAction(action, withSender: sender)
-        }
-
-        if isShare {
-            return false
-        } else if isColors {
-            return false
-        } else {
-            if action == #selector(highlight(_:))
-                || action == #selector(highlightWithNote(_:))
-                || action == #selector(updateHighlightNote(_:))
-                || (action == #selector(define(_:)) && isOneWord)
-                || (action == #selector(play(_:)) && (book.hasAudio || readerConfig.enableTTS))
-                || (action == #selector(share(_:)) && readerConfig.allowSharing)
-                || (action == #selector(copy(_:)) && readerConfig.allowSharing) {
-                return true
+        if readerConfig.allowHighlighting {
+            guard readerConfig.useReaderMenuController else {
+                return super.canPerformAction(action, withSender: sender)
             }
-            return false
+
+            if isShare {
+                return false
+            } else if isColors {
+                return false
+            } else {
+                if action == #selector(highlight(_:))
+                    || action == #selector(highlightWithNote(_:))
+                    || action == #selector(updateHighlightNote(_:))
+                    || (action == #selector(define(_:)) && isOneWord)
+                    || (action == #selector(play(_:)) && (book.hasAudio || readerConfig.enableTTS))
+                    || (action == #selector(share(_:)) && readerConfig.allowSharing)
+                    || (action == #selector(copy(_:)) && readerConfig.allowSharing) {
+                    return true
+                }
+                return false
+            }
         }
+        return false
     }
 
     // MARK: - UIMenuController - Actions
@@ -276,7 +279,7 @@ open class FolioReaderWebView: WKWebView {
     // MARK: - Create and show menu
 
     func createMenu(options: Bool) {
-        guard (self.readerConfig.useReaderMenuController == true) else {
+        guard (self.readerConfig.useReaderMenuController == true && self.readerConfig.allowHighlighting) else {
             return
         }
 
@@ -329,15 +332,14 @@ open class FolioReaderWebView: WKWebView {
         if isShare {
             menuItems = [colorsItem, editNoteItem, removeItem]
 
-//            if (self.readerConfig.allowSharing == true) {
-//                menuItems.append(shareItem)
-//            }
+            if (self.readerConfig.allowSharing == true) {
+                menuItems.append(shareItem)
+            }
 
             isShare = false
         } else if isColors {
             // menu for selecting highlight color
-            //menuItems = [yellowItem, greenItem, blueItem, pinkItem, underlineItem]
-            menuItems = [yellowItem]
+            menuItems = [yellowItem, greenItem, blueItem, pinkItem, underlineItem]
 
         } else {
             // default menu

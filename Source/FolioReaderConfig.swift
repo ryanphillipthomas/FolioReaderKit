@@ -146,6 +146,9 @@ open class FolioReaderConfig: NSObject {
     
     /// Should hide navigation bar on user tap
     open var shouldHideNavigationOnTap = true
+    
+    /// Allow highlighting option, if `false` will hide all sharing highlight and touch controls and menu in chapters
+    open var allowHighlighting = true
 
     /// Allow sharing option, if `false` will hide all sharing icons and options
     open var allowSharing = true
