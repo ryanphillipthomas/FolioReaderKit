@@ -14,6 +14,7 @@
 		0A0BB414250E8B7A0046C13B /* CliffordNineComp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB413250E8B7A0046C13B /* CliffordNineComp.ttf */; };
 		0A0BB41F250E9AB50046C13B /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BB41E250E9AB50046C13B /* Helvetica.ttc */; };
 		0A41904124FC09E3005CD1B8 /* ZOFolioChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41904024FC09E3005CD1B8 /* ZOFolioChapter.swift */; };
+		0AA09256252A5E2600DB998B /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA09255252A5E2600DB998B /* UIDevice.swift */; };
 		1A41E8912031E22300A8F70C /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E8902031E22300A8F70C /* MediaType.swift */; };
 		1A65DDCC1DA73F8E0033C277 /* MenuItemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A65DDCB1DA73F8D0033C277 /* MenuItemKit.framework */; };
 		1A65DDD21DA744190033C277 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A65DDD01DA744190033C277 /* Realm.framework */; };
@@ -139,6 +140,7 @@
 		0A0BB413250E8B7A0046C13B /* CliffordNineComp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CliffordNineComp.ttf; sourceTree = "<group>"; };
 		0A0BB41E250E9AB50046C13B /* Helvetica.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helvetica.ttc; sourceTree = "<group>"; };
 		0A41904024FC09E3005CD1B8 /* ZOFolioChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOFolioChapter.swift; sourceTree = "<group>"; };
+		0AA09255252A5E2600DB998B /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		1A41E8902031E22300A8F70C /* MediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		1A65DDCB1DA73F8D0033C277 /* MenuItemKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MenuItemKit.framework; path = Carthage/Build/iOS/MenuItemKit.framework; sourceTree = "<group>"; };
 		1A65DDD01DA744190033C277 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 		1A958F031D397BE900D56699 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0AA09255252A5E2600DB998B /* UIDevice.swift */,
 				1A958F041D397BE900D56699 /* EPUBCore */,
 				1A958F1D1D397BE900D56699 /* Models */,
 				1A958F251D397BE900D56699 /* Resources */,
@@ -625,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A958FA11D397BE900D56699 /* FolioReaderFontsMenu.swift in Sources */,
+				0AA09256252A5E2600DB998B /* UIDevice.swift in Sources */,
 				1A958F9F1D397BE900D56699 /* FolioReaderConfig.swift in Sources */,
 				1A958FA51D397BE900D56699 /* FolioReaderPage.swift in Sources */,
 				B0D69CC91D0387F7003B4CCD /* SMSegment.swift in Sources */,
