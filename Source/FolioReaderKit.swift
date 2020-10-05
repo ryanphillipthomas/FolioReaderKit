@@ -355,15 +355,17 @@ extension FolioReader {
             return
         }
 
-        guard let currentPage = self.readerCenter?.currentPage, let webView = currentPage.webView else {
+        guard let currentPage = self.readerCenter?.currentPage, let webView = currentPage.webView, let indexPath = self.readerCenter?.getCurrentIndexPath(), let pageNumber = self.readerCenter?.currentPageNumber else {
             return
         }
 
         let position = [
-            "pageNumber": (self.readerCenter?.currentPageNumber ?? 0),
+            "pageNumber": pageNumber,
             "pageOffsetX": webView.scrollView.contentOffset.x,
             "pageOffsetY": webView.scrollView.contentOffset.y,
-            "updateDate": Date()
+            "updateDate": Date(),
+            "pageSection": indexPath.section,
+            "pageRow" : indexPath.row
             ] as [String : Any]
 
         self.savedPositionForCurrentBook = position
