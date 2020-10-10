@@ -169,7 +169,7 @@ extension FolioReader {
         Bool = true, chapters: [ZOFolioChapter], isDRM: Bool = false) {
         let readerContainer = FolioReaderContainer(withConfig: config, folioReader: self, epubPath: epubPath, unzipPath: unzipPath, removeEpub: shouldRemoveEpub, chapters: chapters, isDRM: isDRM)
         let deviceType = UIDevice().type
-        if UIDevice.current.userInterfaceIdiom == .pad || deviceType == .iPhoneSE {
+        if UIDevice.current.userInterfaceIdiom == .pad || deviceType == .iPhoneSE || deviceType == .iPhoneSE2 {
             readerContainer.modalPresentationStyle = .fullScreen
         }
         self.readerContainer = readerContainer
