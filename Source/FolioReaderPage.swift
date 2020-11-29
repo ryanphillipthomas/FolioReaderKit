@@ -533,14 +533,14 @@ open class FolioReaderPage: UICollectionViewCell, WKNavigationDelegate, UIGestur
         guard let webView = webView else { return }
 
         if (self.folioReader.nightMode == true) {
-            // omit create webView and colorView
-            // let script = "document.documentElement.offsetHeight"
-            // let contentHeight = webView.stringByEvaluatingJavaScript(from: script)
-            // let frameHeight = webView.frame.height
-            // let lastPageHeight = frameHeight * CGFloat(webView.pageCount) - CGFloat(Double(contentHeight!)!)
-            // colorView.frame = CGRect(x: webView.frame.width * CGFloat(webView.pageCount-1), y: webView.frame.height - lastPageHeight, width: webView.frame.width, height: lastPageHeight)
+            webView.backgroundColor = self.readerConfig.nightModeBackground
+            webView.isOpaque = false
+            webView.reload()
             colorView.frame = CGRect.zero
         } else {
+            webView.backgroundColor = UIColor.white
+            webView.isOpaque = false
+            webView.reload()
             colorView.frame = CGRect.zero
         }
     }
